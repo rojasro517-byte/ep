@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portafolio profesional de desarrollador web">
+    <title>Mi Portafolio | Desarrollador Web</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Lobster&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        (function () {
+            var saved = localStorage.getItem('theme');
+            var theme = saved === 'dark' || saved === 'light' ? saved : 'light';
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
+</head>
+<body>
+    <!-- Barra de navegación -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#inicio" class="logo">&lt;Dev/&gt;</a>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#inicio" class="nav-link active">Inicio</a></li>
+                <li><a href="#sobre-mi" class="nav-link">Sobre mí</a></li>
+                <li><a href="#habilidades" class="nav-link">Habilidades</a></li>
+                <li><a href="#proyectos" class="nav-link">Certificaciones</a></li>
+                <li><a href="#contacto" class="nav-link">Contacto</a></li>
+                <li><a href="backend/login.php" class="nav-link">Aplicacion</a></li>
+            </ul>
+            <button class="theme-toggle" id="theme-toggle" aria-label="Cambiar entre tema claro y oscuro">
+                <span class="theme-icon sun">🌞</span>
+                <span class="theme-icon moon">🌙</span>
+            </button>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sección Hero -->
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <div class="hero-title-row">
+                    <h1 class="typing-text">ROJAS RIVAS  <span class="highlight" id="typed-name">MARCELO GUSTAVO</span></h1>
+                    <img src="img/captura.png" alt="Imagen al costado del título" class="hero-title-img">
+                </div>
+                <p class="hero-role" id="typed-role">Desarrollador Web</p>
+                <p class="hero-subtitle">Creo experiencias digitales modernas, rápidas y accesibles.</p>
+                <div class="hero-buttons">
+                    <a href="#proyectos" class="btn btn-primary">Ver mis certificaciones</a>
+                    <a href="#contacto" class="btn btn-outline">Contáctame</a>
+                </div>
+            </div>
+        </div>
+        <a href="#sobre-mi" class="scroll-down" aria-label="Bajar a la siguiente sección">
+            <span></span>
+        </a>
+    </section>
+
+    <!-- Sobre mí -->
+    <section id="sobre-mi" class="section">
+        <div class="container">
+            <h2 class="section-title">Sobre mí</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Perfil profesional</h3>
+                    <p>Cuento con facilidad para la lógica de programación y el uso de herramientas digitales. Soy una persona comprometida con el trabajo y busco seguir desarrollando mis habilidades durante mi crecimiento profesional.</p>
+
+                    <h4>Formación académica</h4>
+                    <p><strong>Universidad Autónoma del Perú</strong> (2024 – Presente)<br>Facultad de Ingeniería y Arquitectura · Ingeniería de Sistemas (IV Ciclo).</p>
+                    <p><strong>I.E. Peruano Suizo 7084</strong> (2013 – 2023)<br>Educación secundaria.</p>
+
+                    <h4>Experiencia laboral</h4>
+                    <p><strong>Mozo</strong> — Restaurante de cevichería (enero – marzo 2025, 3 meses).</p>
+                    <p><strong>Operario de almacén</strong> — Boticas y Salud (febrero – marzo 2026, 2 meses).</p>
+
+                    <h4>Competencias blandas</h4>
+                    <p><strong>Trabajo en equipo:</strong> buena comunicación para coordinar y colaborar en proyectos grupales.<br><strong>Organización:</strong> responsable con mis tiempos para cumplir con mis tareas.</p>
+
+                    <div class="stats">
+                        <div class="stat"><span class="stat-number" data-target="4">0</span><span class="stat-label">Ciclo académico</span></div>
+                        <div class="stat"><span class="stat-number" data-target="6">0</span><span class="stat-label">Certificaciones</span></div>
+                        <div class="stat"><span class="stat-number" data-target="2">0</span><span class="stat-label">Años de estudio</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Habilidades -->
+    <section id="habilidades" class="section section-dark">
+        <div class="container">
+            <h2 class="section-title">Habilidades</h2>
+            <div class="skills-grid">
+                <div class="skill-card" data-tilt>
+                    <div class="skill-icon db-icon">DB</div>
+                    <h3>Bases de Datos</h3>
+                    <div class="progress-bar"><div class="progress" data-progress="85"></div></div>
+                    <p>Microsoft SQL Server y phpMyAdmin</p>
+                </div>
+                <div class="skill-card" data-tilt>
+                    <div class="skill-icon auto-icon">PA</div>
+                    <h3>Automatización</h3>
+                    <div class="progress-bar"><div class="progress" data-progress="80"></div></div>
+                    <p>Microsoft Power Apps y Power Automate</p>
+                </div>
+                <div class="skill-card" data-tilt>
+                    <div class="skill-icon excel-icon">EX</div>
+                    <h3>Análisis de Datos</h3>
+                    <div class="progress-bar"><div class="progress" data-progress="85"></div></div>
+                    <p>Excel y Power BI para reportes visuales</p>
+                </div>
+                <div class="skill-card" data-tilt>
+                    <div class="skill-icon java-icon">Jv</div>
+                    <h3>Programación</h3>
+                    <div class="progress-bar"><div class="progress" data-progress="70"></div></div>
+                    <p>Programación orientada a objetos en Java</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificaciones -->
+    <section id="proyectos" class="section">
+        <div class="container">
+            <h2 class="section-title">Certificaciones</h2>
+            <div class="projects-grid">
+                <article class="project-card">
+                    <div class="project-info">
+                        <h3>Power Apps y Power Automate</h3>
+                        <p>IDAT — del 03 al 27 de marzo de 2026 · 32 horas académicas.</p>
+                        <div class="tech-tags">
+                            <span>Power Apps</span><span>Power Automate</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="project-card">
+                    <div class="project-info">
+                        <h3>Excel Experto</h3>
+                        <p>Programa de Excel Experto — Básico (19), Intermedio (20), Avanzado (19) · Promedio ponderado 19.33.</p>
+                        <div class="tech-tags">
+                            <span>Excel Básico</span><span>Excel Intermedio</span><span>Excel Avanzado</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="project-card">
+                    <div class="project-info">
+                        <h3>Java Programming</h3>
+                        <p>Universidad Autónoma del Perú — noviembre 2024 al 26 de enero de 2026. Programación orientada a objetos en Java.</p>
+                        <div class="tech-tags">
+                            <span>Java</span><span>POO</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="project-card">
+                    <div class="project-info">
+                        <h3>Database Design & Programming with SQL</h3>
+                        <p>Universidad Autónoma del Perú — 26 de enero de 2026. Diseño de bases de datos y programación con SQL.</p>
+                        <div class="tech-tags">
+                            <span>SQL Server</span><span>Diseño de BD</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="project-card">
+                    <div class="project-info">
+                        <h3>Habilidades Digitales</h3>
+                        <p>Universidad Autónoma del Perú — del 19 de septiembre al 21 de noviembre de 2025 · 48 horas académicas.</p>
+                        <div class="tech-tags">
+                            <span>Herramientas digitales</span><span>Productividad</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="project-card">
+                    <div class="project-info">
+                        <h3>Webinar Internacional de IA</h3>
+                        <p>Universidad Autónoma del Perú — 29 de octubre de 2024. "Capturando fantasmas que atentan contra la tranquilidad ciudadana con la ayuda de la IA".</p>
+                        <div class="tech-tags">
+                            <span>Inteligencia Artificial</span><span>Seguridad ciudadana</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" class="section section-dark">
+        <div class="container">
+            <h2 class="section-title">Contacto</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>¿Tienes un proyecto en mente?</h3>
+                    <p>Me encantaría ayudarte a hacerlo realidad. Contáctame y hablemos sobre tu idea.</p>
+                    <div class="contact-detail">
+                        <span class="contact-label">Teléfono</span>
+                        <span class="contact-value">937 574 901</span>
+                    </div>
+                    <div class="contact-detail">
+                        <span class="contact-label">Email</span>
+                        <span class="contact-value" id="contact-email">tucorreo@ejemplo.com</span>
+                    </div>
+                    <div class="contact-detail">
+                        <span class="contact-label">Ubicación</span>
+                        <span class="contact-value">Lima, Perú</span>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" class="social-btn" aria-label="GitHub" onclick="return false;">GitHub</a>
+                        <a href="#" class="social-btn" aria-label="LinkedIn" onclick="return false;">LinkedIn</a>
+                        <a href="#" class="social-btn" aria-label="Twitter" onclick="return false;">Twitter</a>
+                    </div>
+                </div>
+                <form class="contact-form" id="contact-form">
+                    <input type="text" name="nombre" placeholder="Tu nombre" required>
+                    <input type="email" name="email" placeholder="Tu email" required>
+                    <textarea name="mensaje" placeholder="Tu mensaje" rows="5" required></textarea>
+                    <button type="submit" class="btn btn-primary">Enviar mensaje</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>© 2026 Marcelo Gustavo Rojas Rivas. Todos los derechos reservados.</p>
+            <a href="#inicio" class="back-to-top">↑ Volver arriba</a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

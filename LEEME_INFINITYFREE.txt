@@ -1,0 +1,15 @@
+CONFIGURACIÓN PARA INFINITYFREE
+================================
+
+1. Sube TODO el contenido de la carpeta public_html del ZIP a la carpeta htdocs de tu cuenta InfinityFree. No subas una carpeta public_html dentro de htdocs: sube su contenido.
+2. En Control Panel > MySQL Databases, crea una base de datos y copia los valores exactos de MySQL Host Name, Database Name y Username. La contraseña es la que estableciste para MySQL.
+3. Abre backend/configuracion_bd.php y reemplaza los cuatro valores CAMBIAR_POR_... por los valores reales. No añadas puerto 3307; usa el host MySQL que muestra InfinityFree.
+4. En el panel, abre phpMyAdmin para esa base de datos. Importa database_infinityfree.sql (este archivo está en la raíz del sitio tras subirlo; puedes importarlo desde tu PC). Alternativamente pega el SQL en la pestaña SQL de phpMyAdmin.
+5. Visita https://TU-DOMINIO/backend/login.php. Registra una cuenta desde el formulario y luego inicia sesión con ese correo y contraseña. Las contraseñas se guardan con password_hash y se validan con password_verify.
+6. El enlace Aplicación del menú y login.html ya apuntan a backend/login.php. Se corrigieron rutas rotas a frontend/, bakend/ y dist/.
+
+IMPORTANTE
+- No se puede garantizar una conexión real hasta que completes los datos privados que InfinityFree asigna a tu cuenta.
+- No compartas públicamente configuracion_bd.php ni la contraseña de MySQL.
+- Si ya existe una tabla usuarios, revisa su estructura antes de importar. Debe tener id, username, email, telefono, password y fecha_registro con tipos compatibles.
+- El archivo admin/ contiene la plantilla AdminLTE; no es phpMyAdmin. No borres esa carpeta porque el panel la utiliza para estilos, imágenes y JavaScript.
